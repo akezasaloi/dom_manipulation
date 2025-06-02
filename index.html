@@ -37,7 +37,25 @@
 <li>Kales</li>
 
 </ul>
+<script>
+    document.body.style.backgroundColor = '#C0C0C0'
+    const heading = document.getElementById('title')
+    const fruList = document.getElementById('fruList')
+    const vegList = document. getElementById('vegList')
+    const heading3 = document.querySelectorAll('h3')
 
+    console.log('parent',heading.parentNode)
+    heading.style.color = 'green'
+    for (i=0;i<heading3.length; i++){
+    heading3[i].style.textTransform = 'uppercase'
+    }
+    const newFruit = document.createElement('li')
+    newFruit.textContent = 'Apples'
+    fruList.appendChild(newFruit)
+    const newVegetable = document.createElement('li')
+    newVegetable.textContent = 'Cabbage'
+    vegList.appendChild(newVegetable)
+</script>
 </body>
 
 </html>
