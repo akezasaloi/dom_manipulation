@@ -1,2 +1,2 @@
-# dom_manipulation
+# Dom manipulation
 Using dom to manipulate html elements
