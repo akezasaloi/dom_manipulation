@@ -4,6 +4,8 @@
 
 <head>
 
+<link href="https://db.onlinewebfonts.com/c/940ace70d6c766e685a20dea33762abf?family=American+Typewriter" rel="stylesheet">
+
 <title>Greens Kiosk</title>
 
 </head>
@@ -11,18 +13,19 @@
 <body>
 
 <h1 id="title">Welcome to Greens Kiosk</h1>
+<img src="images/greens-kiosk2.jpg" alt="" id="greens-kiosk-shop">
 
-<p>We sell fruits and vegetables</p>
+<p id="sub-heading">We sell fruits and vegetables</p>
 
 <h3>Fruits</h3>
 
 <ul id="fruList">
 
-<li>Mangoes</li>
+<li><img src="images/mangoes.jpeg" alt="" id="mangoes"><br>Mangoes</li>
 
-<li>Bananas</li>
+<li><img src="images/bananas.jpeg" alt="" id="bananas"><br>Bananas</li>
 
-<li>Water Melons</li>
+<li><img src="images/watermelon.jpeg" alt="" id="watermelons"><br>Water Melons</div></li>
 
 </ul>
 
@@ -30,31 +33,76 @@
 
 <ul id="vegList">
 
-<li>Onions</li>
+<li><img src="images/onions.jpeg" alt="" id="onions"><br>Onions</li>
 
-<li>Tomatoes</li>
+<li><img src="images/tomatoes.jpeg" alt="" id="tomatoes"><br>Tomatoes</li>
 
-<li>Kales</li>
+<li><img src="images/kales.jpeg" alt="" id="kales"><br>Kales</li>
 
 </ul>
 <script>
     document.body.style.backgroundColor = '#C0C0C0'
+    document.body.style.margin = '0'
     const heading = document.getElementById('title')
+    const shop = document.getElementById('greens-kiosk-shop')
+    const subheading = document.getElementById('sub-heading')
     const fruList = document.getElementById('fruList')
     const vegList = document. getElementById('vegList')
     const heading3 = document.querySelectorAll('h3')
-
+    const mangoes = document.getElementById('mangoes')
+    const bananas = document.getElementById('bananas')
+    const watermelons = document.getElementById('watermelons')
+    const onions = document.getElementById('onions')
+    const tomatoes = document.getElementById('tomatoes')
+    const kales = document.getElementById('kales')
     console.log('parent',heading.parentNode)
     heading.style.color = 'green'
+    heading.style.textAlign = 'center'
+    heading.style.fontSize = '70px'
+    heading.style.fontFamily = "American Typewriter"
+    subheading.style.textAlign = 'center'
+    subheading.style.fontSize = '40px'
+    
     for (i=0;i<heading3.length; i++){
     heading3[i].style.textTransform = 'uppercase'
     }
+    for (i=0;i<fruList.length; i++){
+    fruList[i].style.textTransform = 'uppercase'
+    }
+    shop.style.width = '100%'
+    shop.style.height = '150vh'
+    mangoes.style.width = '10vw'
+    mangoes.style.height = '25vh'
+    bananas.style.width = '10vw'
+    bananas.style.height = '25vh'
+    watermelons.style.width = '10vw'
+    watermelons.style.height = '25vh'
+    onions.style.width = '10vw'
+    onions.style.height = '25vh'
+    tomatoes.style.width = '10vw'
+    tomatoes.style.height = '25vh'
+    kales.style.width = '10vw'
+    kales.style.height = '25vh'
+    fruList.style.display = 'flex'
+    fruList.style.gap = '2vw'
+    vegList.style.display = 'flex'
+    vegList.style.gap = '2vw'
     const newFruit = document.createElement('li')
-    newFruit.textContent = 'Apples'
+    newFruit.innerHTML='<img src="images/apples.jpg" alt=""> <br>Apples'
+    const apples = document.createElement('img')
     fruList.appendChild(newFruit)
+    fruList.appendChild(apples)
+    const broccoli = document.createElement('img')
     const newVegetable = document.createElement('li')
-    newVegetable.textContent = 'Cabbage'
+    newVegetable.innerHTML='<img src="images/broccoli.jpg" alt=""> <br> Broccoli'
     vegList.appendChild(newVegetable)
+    broccoli.src = 'images/broccoli.jpeg'
+    broccoli.style.width = '10vw'
+    broccoli.style.height = '25vh'
+    
+
+
+    
 </script>
 </body>
 
